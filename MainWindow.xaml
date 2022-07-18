@@ -1,0 +1,29 @@
+﻿<Window x:Class="Cinema.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnMonday" Content="Monday" HorizontalAlignment="Left" Margin="100,39,0,0" VerticalAlignment="Top" Width="99" Height="47"/>
+        <Button x:Name="btnTuesday" Content="Tuesday" HorizontalAlignment="Left" Margin="227,39,0,0" VerticalAlignment="Top" Width="99" Height="47"/>
+        <Button x:Name="btnWednesday" Content="Wednesday" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top" Width="99" Height="47"/>
+        <Button x:Name="btnThursday" Content="Thursday" HorizontalAlignment="Left" Margin="482,39,0,0" VerticalAlignment="Top" Width="99" Height="47"/>
+        <Button x:Name="btnFriday" Content="Friday" HorizontalAlignment="Left" Margin="613,39,0,0" VerticalAlignment="Top" Width="99" Height="47"/>
+        <Label Content="Ден:" HorizontalAlignment="Left" Margin="47,50,0,0" VerticalAlignment="Top"/>
+        <ListView x:Name="MoviesView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="100,180,400,108">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Заглавие"/>
+                    <GridViewColumn Header="Категория"/>
+                    <GridViewColumn Header="Рейтинг"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Image HorizontalAlignment="Left" Height="100" Margin="449,180,0,0" VerticalAlignment="Top" Width="101"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="565,180,0,0" VerticalAlignment="Top" Width="101"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="684,180,0,0" VerticalAlignment="Top" Width="101"/>
+    </Grid>
+</Window>
