@@ -24,5 +24,10 @@ namespace Cinema
         {
             InitializeComponent();
         }
+
+        private void GridViewColumn_Opened(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
