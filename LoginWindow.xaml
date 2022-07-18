@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\Георги\source\repos\Cinema\Cinema\cinema.jpg"></ImageBrush>
+        <ImageBrush ImageSource="\cinema.jpg"></ImageBrush>
     </Window.Background>
     <Grid>
         <GroupBox Header="Вход" Height="110" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10, 0, 0, 10">
