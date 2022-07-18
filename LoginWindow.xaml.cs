@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 
 namespace Cinema
 {
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }
