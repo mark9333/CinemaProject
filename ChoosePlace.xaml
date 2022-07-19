@@ -5,9 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema"
         mc:Ignorable="d"
-        Title="Свободни места" Height="450" Width="800">
-    <Grid  Margin="0,0,0,-6" Cursor="ArrowCD">
-        <Grid x:Name="ChoosePlaceGrid" Width="500" Height="300" VerticalAlignment="Top" Margin="0, 10, 0, 0">
+        Title="Свободни места" Height="629" Width="926">
+    <Grid  Cursor="ArrowCD" HorizontalAlignment="Center" Width="906" Margin="0,10,0,26">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="324*"/>
+            <ColumnDefinition Width="664*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid x:Name="ChoosePlaceGrid" Margin="175,128,175,34" Grid.Column="2" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -15,37 +31,50 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btn1" Grid.Row="0" Grid.Column="0" Content="1" Height="90" Click="choosePlace"  Width="90" Background="Green"/>
-            <Button x:Name="btn2" Grid.Row="0" Grid.Column="1" Content="2" Height="90" Click="choosePlace"  Width="90" Background="Green"/>
-            <Button x:Name="btn3" Grid.Row="0" Grid.Column="2" Content="3" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn4" Grid.Row="0" Grid.Column="3" Content="4" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn5" Grid.Row="0" Grid.Column="4" Content="5" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn6" Grid.Row="0" Grid.Column="5" Content="6" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn7" Grid.Row="1" Grid.Column="0" Content="7" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn8" Grid.Row="1" Grid.Column="1" Content="8" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn9" Grid.Row="1" Grid.Column="2" Content="9" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn10" Grid.Row="1" Grid.Column="3" Content="10" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn11" Grid.Row="1" Grid.Column="4" Content="11" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn12" Grid.Row="1" Grid.Column="5" Content="12" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn13" Grid.Row="2" Grid.Column="0" Content="13" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn14" Grid.Row="2" Grid.Column="1" Content="14" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn15" Grid.Row="2" Grid.Column="2" Content="15" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn16" Grid.Row="2" Grid.Column="3" Content="16" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn17" Grid.Row="2" Grid.Column="4" Content="17" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn18" Grid.Row="2" Grid.Column="5" Content="18" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn19" Grid.Row="3" Grid.Column="0" Content="19" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn20" Grid.Row="3" Grid.Column="1" Content="20" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn21" Grid.Row="3" Grid.Column="2" Content="21" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn22" Grid.Row="3" Grid.Column="3" Content="22" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn23" Grid.Row="3" Grid.Column="4" Content="23" Height="90" Click="choosePlace" Width="90" Background="Green"/>
-            <Button x:Name="btn24" Grid.Row="3" Grid.Column="5" Content="24" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn1" Grid.Row="0" Grid.Column="0" Content="1" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn2" Grid.Row="0" Content="2" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,67,60" Grid.RowSpan="2" Grid.Column="1"/>
+            <Button x:Name="btn3" Grid.Row="0" Grid.Column="2" Content="3" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn4" Grid.Row="0" Grid.Column="3" Content="4" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn5" Grid.Row="0" Grid.Column="4" Content="5" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,74,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn6" Grid.Row="0" Grid.Column="5" Content="6" Click="choosePlace" Background="Green" Margin="0,0,4,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn7" Grid.Row="1" Grid.Column="0" Content="7" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn8" Grid.Row="1" Content="8" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,67,60" Grid.RowSpan="2" Grid.Column="1"/>
+            <Button x:Name="btn9" Grid.Row="1" Grid.Column="2" Content="9" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn10" Grid.Row="1" Grid.Column="3" Content="10" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn11" Grid.Row="1" Grid.Column="4" Content="11" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,74,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn12" Grid.Row="1" Grid.Column="5" Content="12" Click="choosePlace" Background="Green" Margin="0,0,4,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn13" Grid.Row="2" Grid.Column="0" Content="13" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn14" Grid.Row="2" Content="14" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,67,60" Grid.RowSpan="2" Grid.Column="1"/>
+            <Button x:Name="btn15" Grid.Row="2" Grid.Column="2" Content="15" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn16" Grid.Row="2" Grid.Column="3" Content="16" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn17" Grid.Row="2" Grid.Column="4" Content="17" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,74,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn18" Grid.Row="2" Grid.Column="5" Content="18" Click="choosePlace" Background="Green" Margin="0,0,4,60" Grid.RowSpan="2"/>
+            <Button x:Name="btn19" Grid.Row="3" Grid.Column="0" Content="19" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,-15"/>
+            <Button x:Name="btn20" Grid.Row="3" Content="20" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,67,-15" Grid.Column="1"/>
+            <Button x:Name="btn21" Grid.Row="3" Grid.Column="2" Content="21" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,-15"/>
+            <Button x:Name="btn22" Grid.Row="3" Grid.Column="3" Content="22" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="0,0,70,-15"/>
+            <Button x:Name="btn23" Grid.Row="3" Grid.Column="4" Content="23" Click="choosePlace" Background="Green" Grid.ColumnSpan="2" Margin="3,0,74,-15"/>
+            <Button x:Name="btn24" Grid.Row="3" Grid.Column="5" Content="24" Click="choosePlace" Background="Green" Margin="0,0,4,-15"/>
         </Grid>
+        <Label x:Name="lblChoose" Content="Избери място:" Margin="11,30,0,0" AutomationProperties.Name="" Height="48" Width="168" Background="#FFF90303" FontSize="18" FontFamily="Arial Black" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2"/>
+        <Button x:Name="btnContinue" Content="Продължи" Click="continueClick" HorizontalAlignment="Right" Margin="0,0,10,-21" VerticalAlignment="Bottom" Height="51" Width="117" Background="#FF3B0DE8" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.RowSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.6"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.612"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnBack" Content="Назад" Click="backClick" Margin="10,0,0,-21" VerticalAlignment="Bottom" Height="51" Width="117" Background="#FF3B0DE8" HorizontalAlignment="Left" Grid.Column="2" Grid.RowSpan="2"/>
     </Grid>
 </Window>
