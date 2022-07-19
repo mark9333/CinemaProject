@@ -27,8 +27,10 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
         <Image Name="Test" Margin="350,0,0,0" Source="/vuF88yWPSnDfmFJVTyNJpVwW.png" Stretch="Fill" Height="100" Width="100" StretchDirection="Both" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible"/>
         <Image Margin="500,0,0,0" Stretch="Fill" Source="/unnamed.jpg" Width="100" Height="100" StretchDirection="Both" VerticalAlignment="Center" HorizontalAlignment="Left"/>
         <Image Margin="650,0,0,0" Source="/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg" Stretch="Fill" Height="100" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
     </Grid>
 </Window>
