@@ -36,6 +36,7 @@ namespace Cinema
             user.password = "123456789";
 
             userDbContext.Users.Add(user);
+            userDbContext.SaveChanges();
         }
     }
 }
