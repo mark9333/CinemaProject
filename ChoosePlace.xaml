@@ -7,35 +7,45 @@
         mc:Ignorable="d"
         Title="Свободни места" Height="450" Width="800">
     <Grid  Margin="0,0,0,-6" Cursor="ArrowCD">
-        <Grid x:Name="ChoosePlaceGrid">
+        <Grid x:Name="ChoosePlaceGrid" Width="500" Height="300" VerticalAlignment="Top" Margin="0, 10, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Rectangle HorizontalAlignment="Center" Height="27" Margin="0,376,0,0" Stroke="Black" VerticalAlignment="Top" Width="674"/>
-            <Button x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="27,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace"  Width="46" Background="Green"/>
-            <Button x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="88,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace"  Width="47" Background="Green"/>
-            <Button x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="151,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="212,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="275,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="336,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="398,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="461,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="522,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn10" Content="10" HorizontalAlignment="Left" Margin="586,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="45" Background="Green"/>
-            <Button x:Name="btn11" Content="11" HorizontalAlignment="Left" Margin="647,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn12" Content="12" HorizontalAlignment="Left" Margin="709,252,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn13" Content="13" HorizontalAlignment="Left" Margin="27,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn14" Content="14" HorizontalAlignment="Left" Margin="88,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn15" Content="15" HorizontalAlignment="Left" Margin="151,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn16" Content="16" HorizontalAlignment="Left" Margin="212,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn17" Content="17" HorizontalAlignment="Left" Margin="275,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn18" Content="18" HorizontalAlignment="Left" Margin="336,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn19" Content="19" HorizontalAlignment="Left" Margin="398,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn20" Content="20" HorizontalAlignment="Left" Margin="461,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn21" Content="21" HorizontalAlignment="Left" Margin="522,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="47" Background="Green"/>
-            <Button x:Name="btn22" Content="22" HorizontalAlignment="Left" Margin="586,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="45" Background="Green"/>
-            <Button x:Name="btn23" Content="23" HorizontalAlignment="Left" Margin="647,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
-            <Button x:Name="btn24" Content="24" HorizontalAlignment="Left" Margin="647,194,0,0" VerticalAlignment="Top" Height="38" Click="choosePlace" Width="46" Background="Green"/>
+            <Button x:Name="btn1" Grid.Row="0" Grid.Column="0" Content="1" Height="90" Click="choosePlace"  Width="90" Background="Green"/>
+            <Button x:Name="btn2" Grid.Row="0" Grid.Column="1" Content="2" Height="90" Click="choosePlace"  Width="90" Background="Green"/>
+            <Button x:Name="btn3" Grid.Row="0" Grid.Column="2" Content="3" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn4" Grid.Row="0" Grid.Column="3" Content="4" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn5" Grid.Row="0" Grid.Column="4" Content="5" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn6" Grid.Row="0" Grid.Column="5" Content="6" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn7" Grid.Row="1" Grid.Column="0" Content="7" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn8" Grid.Row="1" Grid.Column="1" Content="8" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn9" Grid.Row="1" Grid.Column="2" Content="9" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn10" Grid.Row="1" Grid.Column="3" Content="10" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn11" Grid.Row="1" Grid.Column="4" Content="11" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn12" Grid.Row="1" Grid.Column="5" Content="12" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn13" Grid.Row="2" Grid.Column="0" Content="13" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn14" Grid.Row="2" Grid.Column="1" Content="14" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn15" Grid.Row="2" Grid.Column="2" Content="15" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn16" Grid.Row="2" Grid.Column="3" Content="16" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn17" Grid.Row="2" Grid.Column="4" Content="17" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn18" Grid.Row="2" Grid.Column="5" Content="18" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn19" Grid.Row="3" Grid.Column="0" Content="19" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn20" Grid.Row="3" Grid.Column="1" Content="20" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn21" Grid.Row="3" Grid.Column="2" Content="21" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn22" Grid.Row="3" Grid.Column="3" Content="22" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn23" Grid.Row="3" Grid.Column="4" Content="23" Height="90" Click="choosePlace" Width="90" Background="Green"/>
+            <Button x:Name="btn24" Grid.Row="3" Grid.Column="5" Content="24" Height="90" Click="choosePlace" Width="90" Background="Green"/>
         </Grid>
     </Grid>
 </Window>
