@@ -13,12 +13,12 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnMonday" Content="Понеделник" Margin="50,50,0,0" FontFamily="Arial Black" Height="50" VerticalAlignment="Top" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="100" FontStretch="Normal" Cursor="AppStarting"/>
+        <Button x:Name="btnMonday" Content="Понеделник" Margin="50,50,0,0" FontFamily="Arial Black" Height="50" VerticalAlignment="Top" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="100" FontStretch="Normal" Cursor="AppStarting" Click="btnMonday_Click"/>
         <Button x:Name="btnTuesday" Content="Вторник" Margin="200,50,0,0" FontFamily="Arial Black" Height="50" VerticalAlignment="Top" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="100" Cursor="AppStarting"/>
         <Button x:Name="btnWednesday" Content="Сряда" Margin="0,50,0,0" FontFamily="Arial Black" Height="50" VerticalAlignment="Top" Background="White" BorderBrush="White" HorizontalAlignment="Center" Width="100" Cursor="AppStarting"/>
         <Button x:Name="btnThursday" Content="Четъртък" Margin="500,50,0,0" FontFamily="Arial Black" Height="50" VerticalAlignment="Top" Background="White" BorderBrush="White" Width="100" HorizontalAlignment="Left" Cursor="AppStarting"/>
         <Button x:Name="btnFriday" Content="Петък" Margin="650,50,0,0" FontFamily="Arial Black" Height="50" VerticalAlignment="Top" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="100" Cursor="AppStarting"/>
-        <ListView x:Name="MoviesView" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="53,175,471,175">
+        <ListView x:Name="MoviesView" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="53,175,0,0" HorizontalAlignment="Left" Width="276" Height="100" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Заглавие"/>
@@ -27,8 +27,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Image Margin="350,175,350,175" Source="/vuF88yWPSnDfmFJVTyNJpVwW.png" Stretch="Fill" Height="100" Width="100" StretchDirection="Both"/>
-        <Image Margin="500,175,200,175" Stretch="Fill" Source="/unnamed.jpg" Width="100" Height="100" StretchDirection="Both"/>
-        <Image Margin="650,175,50,175" Source="/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg" Stretch="Fill" Height="100" Width="100"/>
+        <Image Name="Test" Margin="350,0,0,0" Source="/vuF88yWPSnDfmFJVTyNJpVwW.png" Stretch="Fill" Height="100" Width="100" StretchDirection="Both" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible"/>
+        <Image Margin="500,0,0,0" Stretch="Fill" Source="/unnamed.jpg" Width="100" Height="100" StretchDirection="Both" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <Image Margin="650,0,0,0" Source="/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg" Stretch="Fill" Height="100" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

@@ -29,5 +29,10 @@ namespace Cinema
         {
 
         }
+
+        private void btnMonday_Click(object sender, RoutedEventArgs e)
+        {
+            Test.Visibility = Visibility.Collapsed; 
+        }
     }
 }
