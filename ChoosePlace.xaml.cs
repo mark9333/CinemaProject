@@ -21,6 +21,8 @@ namespace Cinema
         public ChoosePlace()
         {
             InitializeComponent();
+            
+
         }
 
         private void showFreePlaces()
@@ -48,6 +50,20 @@ namespace Cinema
             else
                 btn.Background = Brushes.Green;
         }
+
+        private void backClick(object sender, RoutedEventArgs e)
+        {
+            var ProgramPage = new MainWindow(); 
+            ProgramPage.Show(); 
+            this.Close();
+        }
+        private void continueClick(object sender, RoutedEventArgs e)
+        {
+            //var ProgramPage = new MainWindow();
+           // ProgramPage.Show();
+            //this.Close();
+        }
+
     }
 }
 

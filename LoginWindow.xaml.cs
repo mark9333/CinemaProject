@@ -37,6 +37,9 @@ namespace Cinema
 
             userDbContext.Users.Add(user);
             userDbContext.SaveChanges();
+            var Window = new MainWindow();
+            Window.Show();
+            this.Close();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Cinema.Data
         {
             // connect to mysql with connection string from app settings
            
-            options.UseMySQL("Server=localhost;uid=root;pwd=1234567890;Database=cinema");
+            options.UseMySQL("Server=localhost;uid=root;pwd=123456789aA;Database=cinema");
         }
 
         public Microsoft.EntityFrameworkCore.DbSet<User> Users { get; set; }
