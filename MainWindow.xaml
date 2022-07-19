@@ -30,5 +30,6 @@
         <Image Margin="350,175,350,175" Source="/vuF88yWPSnDfmFJVTyNJpVwW.png" Stretch="Fill" Height="100" Width="100" StretchDirection="Both"/>
         <Image Margin="500,175,200,175" Stretch="Fill" Source="/unnamed.jpg" Width="100" Height="100" StretchDirection="Both"/>
         <Image Margin="650,175,50,175" Source="/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg" Stretch="Fill" Height="100" Width="100"/>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Избери място" Height="50" Width="100" Click="Button_Click" Margin="0,0,647,54"/>
     </Grid>
 </Window>

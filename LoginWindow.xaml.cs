@@ -21,25 +21,7 @@ namespace Cinema
         public LoginWindow()
         {
             InitializeComponent();
-        }
-
-        private void loginBtn_Click(object sender, RoutedEventArgs e)
-        {
-            UserDbContext userDbContext = new UserDbContext();
-            IEnumerable<User> queryUsers = userDbContext.Users;
-
-            User user = new User();
-
-            user.first_name = "Petra";
-            user.last_name = "Ackerman";
-            user.username = "AOTTTTI";
-            user.password = "123456789";
-
-            userDbContext.Users.Add(user);
-            userDbContext.SaveChanges();
-            var Window = new MainWindow();
-            Window.Show();
-            this.Close();
+            DataContext = new LoginViewModel();
         }
     }
 }
