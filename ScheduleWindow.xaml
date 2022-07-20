@@ -20,7 +20,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="btnMonday" Grid.Row="0" Grid.Column="0" Content="Понеделник"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black"  Width="100"  Click="btnMonday_Click"/>
+            <Button x:Name="btnMonday" Grid.Row="0" Grid.Column="0" Content="Понеделник"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black"  Width="100"  Click="btnMonday_Click" />
             <Button x:Name="btnTuesday" Grid.Row="0" Grid.Column="1" Content="Вторник"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
             <Button x:Name="btnWednesday" Grid.Row="0" Grid.Column="2" Content="Сряда"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
             <Button x:Name="btnThursday" Grid.Row="0" Grid.Column="3" Content="Четъртък"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />

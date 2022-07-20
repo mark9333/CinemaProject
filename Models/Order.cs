@@ -11,7 +11,7 @@ namespace Cinema
     { 
         public int id { get; set; }
         public int user_id { get; set; }
-        public int movie_id { get; set; }
+        public int schedule_id { get; set; }
         public decimal price { get; set; }
         public int hall_number { get; set; }
         public string dtp { get; set; }

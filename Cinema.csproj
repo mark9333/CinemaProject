@@ -8,12 +8,6 @@
 
   <ItemGroup>
     <None Remove="cinema.jpg" />
-    <None Remove="maxresdefault.jpg" />
-    <None Remove="MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA%40._V1_FMjpg_UX1000_.jpg" />
-    <None Remove="MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA%40._V1_FMjpg_UX1000_.png" />
-    <None Remove="MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI%40._V1_.jpg" />
-    <None Remove="unnamed.jpg" />
-    <None Remove="vuF88yWPSnDfmFJVTyNJpVwW.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,12 +22,6 @@
     <Resource Include="cinema.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="maxresdefault.jpg" />
-    <Resource Include="MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_FMjpg_UX1000_.jpg" />
-    <Resource Include="MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_FMjpg_UX1000_.png" />
-    <Resource Include="MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg" />
-    <Resource Include="unnamed.jpg" />
-    <Resource Include="vuF88yWPSnDfmFJVTyNJpVwW.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +37,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>
