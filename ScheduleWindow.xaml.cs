@@ -20,6 +20,8 @@ namespace Cinema
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ScheduleViewModel();
+            
         }
 
         private void GridViewColumn_Opened(object sender, RoutedEventArgs e)

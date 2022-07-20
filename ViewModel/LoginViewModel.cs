@@ -1,4 +1,4 @@
-﻿using Cinema.Data;
+﻿
 using Prism.Commands;
 using System;
 using System.Collections.Generic;

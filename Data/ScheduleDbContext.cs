@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Cinema
 {
-    internal class MovieDbContext : Microsoft.EntityFrameworkCore.DbContext
+    internal class ScheduleDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        public MovieDbContext()
+        public ScheduleDbContext()
         {
 
         }
@@ -21,6 +21,6 @@ namespace Cinema
             options.UseMySQL("Server=localhost;uid=root;pwd=123456789aA;Database=cinema");
         }
 
-        public Microsoft.EntityFrameworkCore.DbSet<User> Movies { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<Schedule> Schedule { get; set; }
     }
 }
