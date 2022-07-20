@@ -1,0 +1,42 @@
+﻿<Window x:Class="Cinema.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema"
+        mc:Ignorable="d"
+        Title="Програма" Height="600" Width="800">
+    <Grid>
+        <Grid Height="50" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0, 40, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btnMonday" Grid.Row="0" Grid.Column="0" Content="Понеделник"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black"  Width="100"  Click="btnMonday_Click"/>
+            <Button x:Name="btnTuesday" Grid.Row="0" Grid.Column="1" Content="Вторник"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
+            <Button x:Name="btnWednesday" Grid.Row="0" Grid.Column="2" Content="Сряда"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
+            <Button x:Name="btnThursday" Grid.Row="0" Grid.Column="3" Content="Четъртък"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
+            <Button x:Name="btnFriday" Grid.Row="0" Grid.Column="4" Content="Петък"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
+            <Button x:Name="btnSaturday" Grid.Row="0" Grid.Column="5" Content="Събота"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
+            <Button x:Name="btnSunday" Grid.Row="0" Grid.Column="6" Content="Неделя"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" />
+        </Grid>
+        <ListView  x:Name="MoviesView"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Height="300" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="300" Header="Заглавие"/>
+                    <GridViewColumn Width="100" Header="Час"/>
+                    <GridViewColumn Width="100" Header="Цена"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ChoosePlaceBtn" Content="Избери Място" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="100" Width="100" Click="ChoosePlaceBtn_Click" />
+    </Grid>
+</Window>

@@ -29,7 +29,14 @@ namespace Cinema
 
         private void btnMonday_Click(object sender, RoutedEventArgs e)
         {
-            Test.Visibility = Visibility.Collapsed; 
+            
+        }
+
+        private void ChoosePlaceBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new ChoosePlace();
+            window.Show();
+            this.Close();
         }
     }
 }

@@ -54,7 +54,6 @@ namespace Cinema
                             MessageBox.Show("Грешни данни за вход!");
                         }
                     }
-
                 }));
             }
         }
