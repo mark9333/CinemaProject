@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Cinema
 {
     
-    internal class Order
+    public class Order
     { 
         public int id { get; set; }
         public int user_id { get; set; }
