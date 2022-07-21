@@ -11,7 +11,7 @@ namespace Cinema
         public int id { get; set; }
         public string name { get; set; }
         public string time { get; set; }
-        public string dayOfWeek { get; set; }
+        public DaysOfWeek dayOfWeek { get; set; }
         public decimal price { get; set; }
 
         public Schedule()
