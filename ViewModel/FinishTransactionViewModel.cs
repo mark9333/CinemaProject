@@ -46,6 +46,8 @@ namespace Cinema
 
                     orderDbContext.SaveChanges();
                     placeDbContext.SaveChanges();
+                    System.Windows.Application.Current.Windows[2].Close();
+
                 }));
             }
         }
