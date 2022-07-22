@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Cinema
 {
-    internal class OrderDbContext : Microsoft.EntityFrameworkCore.DbContext
+    public class PlaceDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        public OrderDbContext()
+        public PlaceDbContext()
         {
 
         }
@@ -21,7 +21,6 @@ namespace Cinema
             options.UseMySQL("Server=localhost;uid=root;pwd=123456789aA;Database=cinema");
         }
 
-        public Microsoft.EntityFrameworkCore.DbSet<Order> Orders { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<Place> Places { get; set; }
     }
 }
-

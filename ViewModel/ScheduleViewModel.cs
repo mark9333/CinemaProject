@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Cinema
@@ -12,6 +13,7 @@ namespace Cinema
     
     internal class ScheduleViewModel : INotifyPropertyChanged
     {
+        private User user;
         private List<Schedule> schedule;
         private List<Schedule> monday;
         private List<Schedule> tuesday;
@@ -20,6 +22,7 @@ namespace Cinema
         private List<Schedule> friday;
         private List<Schedule> saturday;
         private List<Schedule> sunday;
+        private Schedule selectedMovie;
         public event PropertyChangedEventHandler PropertyChanged;
         private DelegateCommand selectMondayCommand;
         private DelegateCommand selectTuesdayCommand;
@@ -28,9 +31,11 @@ namespace Cinema
         private DelegateCommand selectFridayCommand;
         private DelegateCommand selectSaturdayCommand;
         private DelegateCommand selectSundayCommand;
+        private DelegateCommand continueCommand;
 
-        public ScheduleViewModel()
+        public ScheduleViewModel(User user)
         {
+            this.user = user;
             monday = new List<Schedule>();
             tuesday = new List<Schedule>();
             wednesday = new List<Schedule>();
@@ -133,6 +138,20 @@ namespace Cinema
             }
         }
 
+        public ICommand ContinueCommand
+        {
+            get
+            {
+                return continueCommand ?? (continueCommand = new DelegateCommand(() =>
+                {
+                    ChoosePlace choosePlace = new ChoosePlace(SelectedMovie, user);
+                    Window choosePlaceWindow = choosePlace; 
+                    
+                    choosePlaceWindow.ShowDialog();
+                }));
+            }
+        }
+
         private void fillSchedule()
         {
             ScheduleDbContext context = new ScheduleDbContext();
@@ -140,31 +159,44 @@ namespace Cinema
 
             foreach(var movie in movies)
             {
-                if (movie.dayOfWeek.Equals("Monday"))
+                if (movie.day_of_projection.Equals(DaysOfWeek.Monday.ToString()))
                 {
                     monday.Add(movie);
-                } else if (movie.dayOfWeek.Equals("Tuesday"))
+                } else if (movie.day_of_projection.Equals(DaysOfWeek.Tuesday.ToString()))
                 {
                     tuesday.Add(movie);
-                } else if (movie.dayOfWeek.Equals("Wednesday"))
+                } else if (movie.day_of_projection.Equals(DaysOfWeek.Wednesday.ToString()))
                 {
                     wednesday.Add(movie);
-                } else if (movie.dayOfWeek.Equals("Thursday"))
+                } else if (movie.day_of_projection.Equals(DaysOfWeek.Thursday.ToString()))
                 {
                     thursday.Add(movie);
-                } else if (movie.dayOfWeek.Equals("Friday"))
+                } else if (movie.day_of_projection.Equals(DaysOfWeek.Friday.ToString()))
                 {
                     friday.Add(movie);
-                } else if (movie.dayOfWeek.Equals("Saturday"))
+                } else if (movie.day_of_projection.Equals(DaysOfWeek.Saturday.ToString()))
                 {
                     saturday.Add(movie);
-                }  else if (movie.dayOfWeek.Equals("Sunday"))
+                }  else if (movie.day_of_projection.Equals(DaysOfWeek.Sunday.ToString()))
                 {
                     sunday.Add(movie);
                 } else
                 {
                     throw new NullReferenceException();
                 }
+            }
+        }
+
+        public Schedule SelectedMovie
+        {
+            get
+            {
+                return selectedMovie; 
+            }
+            set
+            {
+                selectedMovie = value;
+                OnPropertyChanged("SelectedMovie");
             }
         }
 

@@ -1,39 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Cinema
 {
     
     public partial class ChoosePlace : Window
     {
-        public ChoosePlace()
+        private PlaceDbContext context;
+        private List<int> chosenPlaces;
+        private Schedule movie;
+        private User user;
+
+        public ChoosePlace(Schedule movie, User user)
         {
             InitializeComponent();
-            
-
+            this.movie = movie;
+            this.user = user;
+            context = new PlaceDbContext();
+            showFreePlaces();
         }
 
         private void showFreePlaces()
         {
+            List<Place> places = context.Places.ToList();
+            List<int> placeNumbers = (from p in places where p.projection_id == movie.id select p.place).ToList();
+
             foreach (var item in ChoosePlaceGrid.Children)
-            {
+            {  
 
                 if (item is Button)
                 {
                     Button btn = (Button)item;
-                    btn.Background = Brushes.Green;
+
+                    if (placeNumbers.Contains(Int32.Parse(btn.Content.ToString())))
+                    {
+                        btn.IsEnabled = false;
+                    }
+                    
                 }
             }
         }
@@ -52,18 +59,30 @@ namespace Cinema
         }
 
         private void backClick(object sender, RoutedEventArgs e)
-        {
-            var ProgramPage = new MainWindow(); 
-            ProgramPage.Show(); 
+        { 
             this.Close();
         }
+
         private void continueClick(object sender, RoutedEventArgs e)
         {
-            //var ProgramPage = new MainWindow();
-           // ProgramPage.Show();
-            //this.Close();
-        }
+            chosenPlaces = new List<int>();
+            foreach (var item in ChoosePlaceGrid.Children)
+            { 
+                if (item is Button)
+                {
+                    Button btn = (Button)item;
+                    
+                    if (btn.Background == Brushes.Red)
+                    {
+                        chosenPlaces.Add(Int32.Parse(btn.Content.ToString()));
+                    }
+                }
+            }
 
+            Window finishTransactionWindow = new FinishTransactionWindow(chosenPlaces, user, movie);
+            finishTransactionWindow.ShowDialog();
+            this.Close();
+        }
     }
 }
 

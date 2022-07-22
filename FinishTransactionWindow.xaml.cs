@@ -10,17 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Cinema
 {
-    public partial class MainWindow : Window
+    public partial class FinishTransactionWindow : Window
     {
-        public MainWindow(User user)
+        public FinishTransactionWindow(List<int> chosenPlaces, User user, Schedule movie)
         {
             InitializeComponent();
-            DataContext = new ScheduleViewModel(user);
+            DataContext = new FinishTransactionViewModel(chosenPlaces, user, movie);
+      
         }
     }
 }

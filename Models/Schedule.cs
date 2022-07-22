@@ -9,10 +9,10 @@ namespace Cinema
     public class Schedule
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public string time { get; set; }
-        public DaysOfWeek dayOfWeek { get; set; }
+        public string day_of_projection { get; set; }
         public decimal price { get; set; }
+        public string time_of_projection { get; set; }
+        public string movie_name { get; set; }
 
         public Schedule()
         {

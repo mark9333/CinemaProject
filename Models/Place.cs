@@ -9,6 +9,7 @@ namespace Cinema
     public class Place
     {
         public int id { get; set; }
-        public string name { get; set; }
+        public int place { get; set; }
+        public int projection_id { get; set; }
     }
 }

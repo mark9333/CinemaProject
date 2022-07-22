@@ -45,7 +45,7 @@ namespace Cinema
 
                         if (user != null)
                         {
-                            Window window = new MainWindow();
+                            Window window = new MainWindow(user);
                             window.Show();
                             System.Windows.Application.Current.MainWindow.Close();
                         }

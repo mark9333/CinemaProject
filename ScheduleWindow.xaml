@@ -28,16 +28,16 @@
             <Button x:Name="btnSaturday" Grid.Row="0" Grid.Column="5" Content="Събота"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" Command="{Binding SelectSaturdayCommand}"/>
             <Button x:Name="btnSunday" Grid.Row="0" Grid.Column="6" Content="Неделя"  FontFamily="Arial Black" Height="50" Background="White" BorderBrush="Black" Width="100" Command="{Binding SelectSundayCommand}"/>
         </Grid>
-        <ListView  x:Name="MoviesView" ItemsSource="{Binding DayOfWeekSchedule}"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Height="300" >
+        <ListView  x:Name="MoviesView" ItemsSource="{Binding DayOfWeekSchedule}"  VerticalAlignment="Center" SelectedItem="{Binding SelectedMovie}" HorizontalAlignment="Center" Width="500" Height="300" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="300" Header="Заглавие" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Width="100" Header="Час" DisplayMemberBinding="{Binding time}"/>
+                    <GridViewColumn Width="300" Header="Заглавие" DisplayMemberBinding="{Binding movie_name}"/>
+                    <GridViewColumn Width="100" Header="Час" DisplayMemberBinding="{Binding time_of_projection}"/>
                     <GridViewColumn Width="100" Header="Цена" DisplayMemberBinding="{Binding price}"/>
                 </GridView>
                 
             </ListView.View>
         </ListView>
-        <Button x:Name="ChoosePlaceBtn" Content="Избери Място" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="100" Width="100" Click="ChoosePlaceBtn_Click" />
+        <Button x:Name="ChoosePlaceBtn" Content="Избери Място" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="100" Width="100" Command="{Binding ContinueCommand}" />
     </Grid>
 </Window>
