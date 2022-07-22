@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:Cinema"
         mc:Ignorable="d"
         Title="Завършване на поръчка" Height="500" Width="500">
+    <Window.Background>
+        <ImageBrush ImageSource="\cinema.jpg"></ImageBrush>
+    </Window.Background>
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Background="white" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Ден: " FontFamily="Bold" FontSize="25"/>
+                <TextBlock Text="Ден: "  FontFamily="Bold" FontSize="25"/>
                 <TextBlock x:Name="txtBOmzetMaand" TextWrapping="Wrap" Text="{Binding Day}" FontFamily="Bold" FontSize="25"/>
             </StackPanel>
             <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Час: "  FontFamily="Bold" FontSize="25"/>
+                <TextBlock Text="Час: "   FontFamily="Bold" FontSize="25"/>
                 <TextBlock TextWrapping="Wrap" Text="{Binding Time}"  FontFamily="Bold" FontSize="25"/>
             </StackPanel>
             <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -30,6 +33,6 @@
             </StackPanel>
         </StackPanel>
 
-        <Button Height="50" Width="100" Content="Приключи" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 10" Command="{Binding FinishCommand}" />
+        <Button Height="50" Width="100" Content="Приключи" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 20" Command="{Binding FinishCommand}" />
     </Grid>
 </Window>

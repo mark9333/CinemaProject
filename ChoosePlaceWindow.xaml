@@ -6,13 +6,11 @@
         xmlns:local="clr-namespace:Cinema"
         mc:Ignorable="d"
         Title="Свободни места" Height="600" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="\cinema.jpg"></ImageBrush>
+    </Window.Background>
     <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="White" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+       
         <Grid x:Name="ChoosePlaceGrid" Height="400" Width="500">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -53,8 +51,8 @@
             <Button x:Name="btn23" Grid.Row="3" Grid.Column="4" Content="23" Click="choosePlace" Background="Green" />
             <Button x:Name="btn24" Grid.Row="3" Grid.Column="5" Content="24" Click="choosePlace" Background="Green" />
         </Grid>
-        <Label x:Name="lblChoose" Content="Избери място:"  AutomationProperties.Name="" Height="48" Width="168" Background="#FFF90303" FontSize="18" FontFamily="Arial Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 10, 0, 0" />
-        <Button x:Name="btnContinue" Content="Продължи" Click="continueClick" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="51" Width="117" Background="#FF3B0DE8" RenderTransformOrigin="0.5,0.5" Margin="0, 0, 10, 10" />
-        <Button x:Name="btnBack" Content="Назад" Click="backClick"  VerticalAlignment="Bottom" Height="51" Width="117" Background="#FF3B0DE8" HorizontalAlignment="Left" Margin="10, 0, 0, 10"/>
+        <Label x:Name="lblChoose" Content="Избери място:"  AutomationProperties.Name="" Height="48" Width="168"  FontSize="18" FontFamily="Arial Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 10, 0, 0" />
+        <Button x:Name="btnContinue" Content="Продължи" Click="continueClick" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="51" Width="117"  RenderTransformOrigin="0.5,0.5" Margin="0, 0, 20, 20" />
+        <Button x:Name="btnBack" Content="Назад" Click="backClick"  VerticalAlignment="Bottom" Height="51" Width="117"  HorizontalAlignment="Left" Margin="20, 0,0, 20"/>
     </Grid>
 </Window>
